@@ -7,8 +7,6 @@ module.exports = function(app) {
 	app.route('/')
 		.get(appController.home);
 
-	// app.route('/tasks/:taskId')
-	// 	.get(todoList.read_a_task)
-	// 	.put(todoList.update_a_task)
-	// 	.delete(todoList.delete_a_task);
+app.route('/rss/:param1')
+	.get(appController.rss);
 };
