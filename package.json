@@ -11,8 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dateformat": "^3.0.3",
     "express": "^4.16.3",
+    "mysql": "^2.15.0",
     "nodemon": "^1.17.3",
-    "rss-to-json": "^1.0.4"
+    "rss-to-json": "^1.0.4",
+    "twitter": "^1.7.1"
   }
 }

@@ -1,26 +1,16 @@
+var dateformat = require('dateformat');
 var express = require('express'),
 app = express(),
 port = process.env.PORT || 3000,
-//mongoose = require('mongoose'),
 controller = require('./controller/appController'),
 routes = require('./routes/appRoutes'),
 bodyParser = require('body-parser');
-
-//mongoose.Promise = global.Promise;
-//mongoose.connect('mongodb://localhost/Tododb');
+var date = new Date();
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
-//var routes = require('./api/routes/todoListRoutes');
-//routes(app);
-// var router = express.Router();
-//
-// router.get('/', function(req, res) {
-//     res.send("Hello World!");
-// });
 
 routes(app);
 
@@ -30,4 +20,4 @@ app.use(function(req, res) {
 
 app.listen(port);
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('RESTful API server started ' + dateformat(date, "isoDateTime") + ' on: ' + port);
