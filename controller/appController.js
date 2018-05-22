@@ -6,7 +6,16 @@ var urlObserva = 'https://www.elobservador.com.uy/rss/home.xml';
 var Twitter = require('twitter');
 
 exports.home = function(req, res) {
- res.send("Hello World my friend!");
+
+  var objMenu =  [{
+    "id" : "1",
+    "Title" : "Hola mundo!",
+  }];
+
+
+
+
+ res.send(objMenu);
 };
 
 exports.rss = function(req, res) {
